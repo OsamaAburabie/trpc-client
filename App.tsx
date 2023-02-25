@@ -38,7 +38,7 @@ function App() {
 
   const queryCache = new QueryCache({
     onError: (err: any) => {
-      // any error handling code...
+      // any error handling code..
       Toast.show({
         type: "error",
         text1: "Error",
