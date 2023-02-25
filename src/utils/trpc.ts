@@ -4,7 +4,7 @@ import {
   inferReactQueryProcedureOptions,
 } from "@trpc/react-query";
 import { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
-import type { AppRouter } from "../../../express-prisma-trpc-starter/trpc/router";
+import type { AppRouter } from "../../../trpc-backend/trpc/router";
 export type ReactQueryOptions = inferReactQueryProcedureOptions<AppRouter>;
 export type RouterInputs = inferRouterInputs<AppRouter>;
 export type RouterOutputs = inferRouterOutputs<AppRouter>;

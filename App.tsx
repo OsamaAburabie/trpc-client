@@ -7,7 +7,7 @@ import {
   QueryClient,
   QueryKey,
 } from "@tanstack/react-query";
-import { httpBatchLink, httpLink } from "@trpc/client";
+import { httpLink } from "@trpc/client";
 import RootStack from "./src/navigation/RootStackNavigation";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { createAsyncStoragePersister } from "@tanstack/query-async-storage-persister";
@@ -19,7 +19,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import Toast from "react-native-toast-message";
 
 const PROD_URL = "https://trpc-backend.onrender.com/trpc";
-const DEV_URL = "http://192.168.1.85:5000/trpc";
+const DEV_URL = "http://192.168.1.95:3000/trpc";
 function App() {
   const cacheTime = 1000 * 60 * 60 * 24; // 24 hours
 
@@ -62,7 +62,7 @@ function App() {
   const trpcClient = trpc.createClient({
     links: [
       httpLink({
-        url: PROD_URL,
+        url: DEV_URL,
         headers() {
           return {
             Authorization: `Bearer ${
