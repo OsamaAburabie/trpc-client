@@ -18,7 +18,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aburabie.trpc.client"
     },
     "android": {
       "adaptiveIcon": {
